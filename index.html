@@ -12,6 +12,21 @@
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
+      <script>
+     
+        /* Add "https://api.ipify.org?format=json" statement
+                   this will communicate with the ipify servers in
+                   order to retrieve the IP address $.getJSON will
+                   load JSON-encoded data from the server using a
+                   GET HTTP request */
+                    
+        $.getJSON("https://api.ipify.org?format=json", function(data) {
+             
+            // Setting text of element P with id gfg
+            $("#gfg").html(data.ip);
+        })
+        </script>
+
       <!-- owl carousel style -->
       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css" />
       <!-- bootstrap css -->
@@ -34,6 +49,12 @@
    <body>
       <!--header section start -->
       <div class="header_section">
+        <center>
+            <h1>GeeksforGeeks</h1>
+            <h3>Public IP Address of user is:</h3>
+            <p id="gfg"></p>
+     
+        </center>
          <div class="container">
             <nav class="navbar navbar-dark bg-dark">
                <a class="logo" href="index.html"><img src="images/logo.png"></a>
